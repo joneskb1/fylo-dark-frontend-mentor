@@ -649,7 +649,8 @@ ul {
 
 /* active and hover states  */
 @media (hover: hover) and (pointer: fine) {
-  .nav-item:hover {
+  .nav-item:hover,
+  .nav-item:active {
     font-weight: bold;
     text-decoration: underline;
   }
@@ -681,7 +682,7 @@ ul {
   }
 }
 
-.nav-item:active {
+.nav-item-active {
   font-weight: bold;
   text-decoration: underline;
 }
