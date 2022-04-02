@@ -1,3 +1,7 @@
+/* fix footer and header  
+  add active states
+*/
+
 :root {
   --intro-email-background: hsl(217, 28%, 15%);
   --main-background: hsl(218, 28%, 13%);
@@ -58,7 +62,7 @@ ul {
 /* cta */
 
 .CTA-container {
-  padding: 1.7rem;
+  padding-top: 1.7rem;
   background: var(--intro-email-background);
   position: relative;
   z-index: 1;
@@ -71,19 +75,8 @@ ul {
   right: 0;
   margin: 0 auto;
   z-index: -1;
-  width: 100%;
-}
-
-.background-cta-text {
-  position: absolute;
-  width: 100%;
-  min-height: 250px;
-  top: 59%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  background: var(--main-background);
-  z-index: -1;
+  width: 100vw;
+  height: 350px;
 }
 
 .CTA-img {
@@ -99,13 +92,14 @@ ul {
   line-height: 36px;
   font-size: 1.7rem;
   text-align: center;
-  padding: 1.7rem 0 1.7rem 0;
+  padding: 1.7rem;
 }
 
 .CTA-p {
   text-align: center;
   line-height: 1.5rem;
   padding-bottom: 1.7rem;
+  padding: 0 2.7rem 1.7rem 2.7rem;
 }
 
 .get-started {
@@ -200,14 +194,17 @@ ul {
 /* testimonals  */
 
 .testimonals-container {
-  position: relative;
   padding: 1.7rem;
+}
+
+.top-testimonial {
+  position: relative;
 }
 
 .quote-img {
   position: absolute;
-  top: 5%;
-  left: 15%;
+  top: -20px;
+  left: 0px;
   width: 30px;
   height: 20px;
 }
@@ -217,13 +214,14 @@ ul {
   width: 280px;
   height: 160px;
   margin: 2rem auto 2rem auto;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 4px;
 }
 
 .testimonal-p {
   font-size: 0.714rem;
   line-height: 1.28rem;
+  padding-bottom: 1rem;
 }
 
 .testimonal-person-container {
@@ -258,10 +256,12 @@ ul {
   background: var(--intro-email-background);
   width: 336px;
   height: 353px;
-  margin: 5rem auto;
+  margin: 5rem auto -12rem auto;
   padding: 2rem;
   border-radius: 4px;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .email-h2 {
@@ -313,6 +313,8 @@ ul {
 /* footer */
 .footer-container {
   padding: 1.7rem;
+  background: var(--footer-background);
+  padding-top: 15rem;
 }
 
 .logo-footer {
@@ -349,6 +351,7 @@ ul {
 .detail-p {
   font-size: 1.14rem;
   line-height: 1.71rem;
+  width: 280px;
 }
 
 .small-text {
@@ -376,4 +379,261 @@ ul {
   margin: 0 0.5rem 0 0.5rem;
   width: 28px;
   height: 27px;
+}
+
+@media (min-width: 550px) {
+  /* CTA  */
+
+  .CTA-h1,
+  .CTA-p,
+  .stay-productive-p,
+  .fylo-works-container {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .curvy-line {
+    content: url("/images/bg-curvy-desktop.svg");
+  }
+}
+
+@media (min-width: 750px) {
+  /* CTA */
+  .logo {
+    width: 176px;
+    height: 52px;
+  }
+  .nav-item {
+    font-size: 1rem;
+    line-height: 1.34rem;
+  }
+  .CTA-img {
+    width: 450px;
+    height: 333px;
+  }
+  .CTA-h1 {
+    font-size: 2.85rem;
+    line-height: 4.28rem;
+    max-width: 589px;
+  }
+  .CTA-p {
+    font-size: 1.42rem;
+    line-height: 2.14rem;
+    max-width: 589px;
+  }
+
+  .get-started {
+    width: 280px;
+    height: 56px;
+  }
+
+  .curvy-line {
+    height: 500px;
+  }
+
+  /* features */
+  .features-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* stay productive */
+  .stay-productive-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .stay-productive-h2 {
+    text-align: left;
+    font-size: 3rem;
+    line-height: 3.57rem;
+  }
+
+  .stay-productive-p {
+    margin: 0;
+    font-size: 1.14rem;
+    line-height: 1.7rem;
+  }
+
+  .fylo-works-container {
+    margin: 0;
+  }
+  .fylo-works-link {
+    font-size: 1.14rem;
+    line-height: 1.55rem;
+    width: 166px;
+    height: 27px;
+  }
+
+  /* testimonal */
+
+  .testimonal-container {
+    width: 360px;
+    height: 200px;
+    padding: 2.5rem;
+  }
+
+  .testimonal-p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  /* email */
+
+  .email-container {
+    width: 650px;
+    height: 300px;
+    padding: 3.5rem;
+  }
+
+  .email-h2 {
+    font-size: 2.28rem;
+    line-height: 3.42rem;
+  }
+
+  .form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .email-input {
+    width: 70%;
+    margin-right: 1rem;
+  }
+
+  /* footer */
+
+  .detail-wrap {
+    display: flex;
+  }
+
+  .detail-p {
+    width: 150px;
+  }
+
+  .nav-footer-ul,
+  .social-container,
+  .detail-item,
+  .nav-item-footer {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .detail-item {
+    margin: 0;
+  }
+
+  .nav-item-footer {
+    padding-bottom: 1rem;
+    font-size: 1.14rem;
+    line-height: 1.55rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* CTA */
+  .CTA-img {
+    width: 720px;
+    height: 534px;
+  }
+
+  .curvy-line {
+    height: 620px;
+  }
+
+  /* features */
+  .features-container {
+    padding: 10rem;
+  }
+
+  .feature-container {
+    min-width: 349px;
+    min-height: 214px;
+  }
+
+  .computer {
+    width: 84px;
+    height: 78px;
+    padding: 0;
+  }
+
+  .security {
+    width: 66px;
+    height: 84px;
+    padding: 0;
+  }
+
+  .clock {
+    width: 84px;
+    height: 69px;
+    padding: 0;
+  }
+
+  .files {
+    width: 90px;
+    height: 63px;
+    padding: 0;
+  }
+
+  .feature-h2 {
+    padding-top: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+
+  /* stay-productive */
+
+  .stay-productive-img {
+    width: 614px;
+    height: 464px;
+  }
+
+  .stay-productive-container {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .stay-productive-text-container {
+    margin: 0 auto;
+  }
+
+  .stay-productive-p {
+    max-width: 563px;
+  }
+
+  .stay-productive-h2 {
+    max-width: 350px;
+  }
+
+  /* testimonals */
+  .testimonals-container {
+    display: flex;
+  }
+
+  /* email */
+  .email-container {
+    width: 863px;
+    height: 275px;
+    padding: 2.75rem;
+  }
+
+  .form {
+    justify-content: space-around;
+  }
+
+  .email-input {
+    width: 480px;
+  }
+  .email-btn {
+    width: 200px;
+  }
+
+  .email-p {
+    max-width: 673px;
+    margin: 0 auto 2rem auto;
+  }
+
+  /* footer  */
+  .footer-container {
+  }
 }
