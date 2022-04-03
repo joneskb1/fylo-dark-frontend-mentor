@@ -379,6 +379,7 @@ ul {
 .small-text {
   font-size: 1rem;
   line-height: 1.5rem;
+  color: white;
 }
 
 .nav-footer-ul {
@@ -656,7 +657,9 @@ ul {
   }
 
   .get-started:hover,
-  .email-btn:hover {
+  .email-btn:hover,
+  .get-started:active,
+  .email-btn:active {
     background: #8adae3;
   }
 
@@ -665,19 +668,23 @@ ul {
     border-bottom: 1px solid white;
   }
 
-  .nav-item-footer:hover {
+  .nav-item-footer:hover,
+  .nav-item-footer:active {
     font-weight: bold;
   }
 
-  .facebook:hover {
+  .facebook:hover,
+  .facebook:active {
     content: url("images/icon-facebook-active.svg");
   }
 
-  .instagram:hover {
+  .instagram:hover,
+  .instagram:active {
     content: url("images/icon-instagram-active.svg");
   }
 
-  .twitter:hover {
+  .twitter:hover,
+  .twitter:active {
     content: url("images/icon-twitter-active.svg");
   }
 }
@@ -687,8 +694,7 @@ ul {
   text-decoration: underline;
 }
 
-.get-started:active,
-.email-btn:active {
+.active-btn {
   background: #8adae3;
 }
 
@@ -701,18 +707,18 @@ ul {
   content: url("images/icon-arrow-active.svg");
 }
 
-.nav-item-footer:active {
+.nav-item-footer-active {
   font-weight: bold;
 }
 
-.facebook:active {
+.facebook-active {
   content: url("images/icon-facebook-active.svg");
 }
 
-.instagram:active {
+.instagram-active {
   content: url("images/icon-instagram-active.svg");
 }
 
-.twitter:active {
+.twitter-active {
   content: url("images/icon-twitter-active.svg");
 }
